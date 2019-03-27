@@ -1,0 +1,28 @@
+version: '3'
+networks:
+  localbridge:
+    driver: bridge
+services:
+  servidor:
+    build: .
+    container_name: django
+    command: ["./wait-for-postgres.sh", "db", "./manage.py runserver 0.0.0.0:8000"]
+    depends_on: 
+      - db
+    networks:
+      - localbridge
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./django/myproject:/code
+  db:
+    container_name: postgre
+    environment:
+      POSTGRES_DB: djangodb
+    image: "postgres:11.2-alpine"
+    networks:
+      - localbridge
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
