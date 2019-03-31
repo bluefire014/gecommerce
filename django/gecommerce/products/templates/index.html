@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+  </head>
+
+  <body>
+    <header>
+      <h1>GECommerce</h1>
+      <form>
+        <input type="text" placeholder="Search.." name="search" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <h2>O site genérico de comércio online</h2>
+    </header>
+
+    <nav>
+      <ul>
+        <a href="">Menu1</a>
+        <a href="">Menu2</a>
+        <a href="">Menu3</a>
+      </ul>
+    </nav>
+
+    <ul>
+      <li>
+        <img src="Produto1.jpg" alt="Produto1" />
+        Produto1
+        <button type="button">
+          Comprar
+        </button>
+      </li>
+      <li>
+        <img src="Produto2.jpg" alt="Produto2" />
+        Produto2
+        <button type="button">
+          Comprar
+        </button>
+      </li>
+      <li>
+        <img src="Produto3.jpg" alt="Produto3" />
+        Produto3
+        <button type="button">
+          Comprar
+        </button>
+      </li>
+    </ul>
+  </body>
+</html>
