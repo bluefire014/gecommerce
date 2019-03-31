@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from products.urls import urlpatterns as productsUrls
+
 urlpatterns = [
+    *productsUrls,
     path('admin/', admin.site.urls),
 ]
