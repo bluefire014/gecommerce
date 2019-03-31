@@ -1,6 +1,6 @@
 FROM python:3.7.2-alpine3.9
 
-ADD ./django/myproject /code
+ADD ./django/gecommerce /code
 WORKDIR /code
 
 VOLUME [ "/code" ]
