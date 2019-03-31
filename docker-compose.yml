@@ -14,7 +14,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./django/myproject:/code
+      - ./django/gecommerce:/code
   db:
     container_name: postgre
     environment:
