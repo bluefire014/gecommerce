@@ -5,7 +5,7 @@ WORKDIR /code
 
 VOLUME [ "/code" ]
 
-RUN apk update && apk add bash python3-dev postgresql-dev postgresql-client build-base
+RUN apk update && apk add build-base jpeg-dev zlib-dev bash python3-dev postgresql-dev postgresql-client
 RUN pip install --upgrade setuptools
 RUN easy_install -U setuptools
 RUN pip install -r requirements.txt
